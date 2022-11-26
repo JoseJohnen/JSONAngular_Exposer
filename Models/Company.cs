@@ -1,0 +1,9 @@
+﻿namespace JSONAngular_Exposer.Models
+{
+    public class Company
+    {
+        public string name { get; set; }
+        public string catchPhrase { get; set; }
+        public string bs { get; set; }
+    }
+}
