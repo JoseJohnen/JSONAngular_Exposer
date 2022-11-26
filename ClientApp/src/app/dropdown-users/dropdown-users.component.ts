@@ -17,28 +17,16 @@ export class DropdownUsersComponent implements OnInit {
   @ViewChild('window') window!: ElementRef;
 
   constructor(private service:DropdownUsersService, @Inject('BASE_URL') baseUrl: string) {
-    /*http.get<User[]>(baseUrl + 'user').subscribe(result => {
-      this.l_users = result;
-    }, error => console.error(error));*/
   }
 
   OpenModal() {
-    //var modal = document.getElementById("myModal");
     this.modal.nativeElement.style.display = "block";
-    //alert("Entro");
   }
 
   // When the user clicks on <span> (x), close the modal
   CloseModal() {
     this.modal.nativeElement.style.display = "none";
   }
-
-  // When the user clicks anywhere outside of the modal, close it
-  /*window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }*/
 
   GetAll()  {
     this.service.GetAll().subscribe(result => {
